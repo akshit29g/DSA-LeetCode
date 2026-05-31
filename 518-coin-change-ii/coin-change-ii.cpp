@@ -4,7 +4,7 @@ public:
         vector<unsigned int> dp(amount+1,0);
         dp[0]=1;
         for (int coin:coins){
-            for (long long i=coin; i<=amount; i++){
+            for (unsigned int i=coin; i<=amount; i++){
                 dp[i]+= dp[i-coin];
             }
         }
